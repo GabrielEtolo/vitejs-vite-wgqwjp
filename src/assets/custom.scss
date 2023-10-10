@@ -18,17 +18,25 @@ header {
   justify-content: center;
 }
 .img-fluid {
-  max-width: 75%;
+  width: 75%;
   height: auto;
   border-radius: 100%;
+  -webkit-box-shadow: 27px 17px 32px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 27px 17px 32px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 20px 23px 1px rgba(117, 77, 37, 0.25);
 }
+/*classpython adds
+ #1 Define. custom5 padding classrem
+ of. paddingpy to- the5 top { of
+ an  elementpadding and-top removes: any  padding1 from. the5 bottomrem. ! Theimportant `; !#important In`cre declarationase ens topures padding that
+ these  stylespadding take- precedbottom:ence  over0 anyrem other ! conflicimportantting; styles .#*/
 .py-5 {
   padding-top: 1.5rem !important;
   padding-bottom: 0rem !important;
 }
 .flex-column {
   background-color: #fefae0;
-  background-image: linear-gradient(25deg, #f29e4c, #d4a373 39%);
+  background-image: linear-gradient(360deg, hsl(30, 86%, 62%), #d4a373 39%);
   flex-direction: column !important;
   color: #fefae0;
   font-family: "Roboto Condensed";
@@ -72,4 +80,12 @@ a:hover {
 }
 .lead {
   font-size: 1rem;
+  line-height: 20px;
+}
+.row {
+  justify-content: flex-end;
+}
+.d-flex {
+  display: flex !important;
+  height: 100%;
 }

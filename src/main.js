@@ -1,17 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import { createApp } from 'vue';
+import { createRouter, createWebHistory } from "vue-router";
+import { createApp } from "vue";
 
-import 'bootstrap';
-import './assets/custom.scss';
+import "bootstrap";
+import "./assets/custom.scss";
 
-import App from './App.vue';
-import Home from './pages/Home.vue';
-import About from './pages/About.vue';
+import App from "./App.vue";
+import Home from "./pages/Home.vue";
+import Contact from "./pages/Contact.vue";
+import Portfolio from "./pages/portfolio.vue";
 
 // Définition des routes
 const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
+  { path: "/", component: Home },
+  { path: "/contact", component: Contact },
+  { path: "/portfolio", component: Portfolio },
 ];
 
 // Création du routeur
@@ -26,4 +28,4 @@ const app = createApp(App);
 app.use(router);
 
 // Montage de l'application sur l'élément #app de index.html
-app.mount('#app');
+app.mount("#app");

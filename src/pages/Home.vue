@@ -11,7 +11,7 @@ import { RouterLink } from "vue-router";
           class="d-block mx-lg-auto img-fluid"
           alt="Bootstrap Themes"
           width=auto
-          height= 20%
+          min-height= 300px
           loading="lazy"
         />
       </div>
@@ -27,9 +27,8 @@ import { RouterLink } from "vue-router";
           rejoignent pour façonner l'avenir du web.
         </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button class="btn btn-primary"  type="submit">Button</button>
-            <button class="btn btn-primary" type="submit">Button</button>
-            
+           <RouterLink to="/portfolio" class="btn btn-primary">Voir mon portfolio</RouterLink>
+          <RouterLink to="/contact" class="btn btn-outline-secondary">Me contacter</RouterLink>
            
 
          
