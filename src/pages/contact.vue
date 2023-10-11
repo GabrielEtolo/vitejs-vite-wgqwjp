@@ -8,7 +8,7 @@
       repondre.
     </p>
 
-    <div class="row">
+    <div class="row contactform">
       <!--Grid column-->
       <div class="col-md-9 mb-md-0 mb-5">
         <form
@@ -18,12 +18,17 @@
           method="POST"
         >
           <!--Grid row-->
-          <div class="row">
+          <div class="row contactform">
             <!--Grid column-->
             <div class="col-md-6">
               <div class="md-form mb-0">
-                <input type="text" id="name" name="name" class="form-control" />
-                <label for="name" class="">Votre nom</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Votre Nom"
+                  class="form-control"
+                />
               </div>
             </div>
             <!--Grid column-->
@@ -36,8 +41,8 @@
                   id="email"
                   name="email"
                   class="form-control"
+                  placeholder="Votre email"
                 />
-                <label for="email" class="">Votre email</label>
               </div>
             </div>
             <!--Grid column-->
@@ -45,7 +50,7 @@
           <!--Grid row-->
 
           <!--Grid row-->
-          <div class="row">
+          <div class="row contactform">
             <div class="col-md-12">
               <div class="md-form mb-0">
                 <input
@@ -53,15 +58,15 @@
                   id="subject"
                   name="subject"
                   class="form-control"
+                  placeholder="Votre sujet"
                 />
-                <label for="subject" class="">Votre sujet</label>
               </div>
             </div>
           </div>
           <!--Grid row-->
 
           <!--Grid row-->
-          <div class="row">
+          <div class="row contactform">
             <!--Grid column-->
             <div class="col-md-12">
               <div class="md-form">
@@ -71,15 +76,15 @@
                   name="message"
                   rows="2"
                   class="form-control md-textarea"
+                  placeholder="Dites m'en plus"
                 ></textarea>
-                <label for="message">Votre message</label>
               </div>
             </div>
           </div>
           <!--Grid row-->
         </form>
 
-        <div class="text-center text-md-left">
+        <div class="text-center text-md-left" style="margin-top: 1rem">
           <a
             class="btn btn-primary"
             onclick="document.getElementById('contact-form').submit();"

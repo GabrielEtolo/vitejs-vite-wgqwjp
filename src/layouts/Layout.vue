@@ -1,5 +1,12 @@
 <script setup>
 import { RouterLink } from "vue-router";
+document.documentElement.classList.add("preparation");
+window.onload = function () {
+  document.documentElement.classList.remove("preparation");
+  window.onload = function () {
+    document.documentElement.classList.add("show-time");
+  };
+};
 </script>
 
 <template>
