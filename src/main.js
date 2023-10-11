@@ -6,7 +6,7 @@ import "./assets/custom.scss";
 
 import App from "./App.vue";
 import Home from "./pages/Home.vue";
-import Contact from "./pages/Contact.vue";
+import Contact from "./pages/contact.vue";
 import Portfolio from "./pages/portfolio.vue";
 
 // Définition des routes
