@@ -325,6 +325,11 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
+"vue-responsive-video-background-player@^2.3.1":
+  "integrity" "sha512-9IdFfmHe1cY0PvTw51sYcSO5+gPJya5einLIoktVzBMALEC3yok36X/1+hDfbgihapRYxz3fmyv1o5M1u+0xEA=="
+  "resolved" "https://registry.npmjs.org/vue-responsive-video-background-player/-/vue-responsive-video-background-player-2.3.1.tgz"
+  "version" "2.3.1"
+
 "vue-router@4":
   "integrity" "sha512-DIUpKcyg4+PTQKfFPX88UWhlagBEBEfJ5A8XDXRJLUnZOvcpMF8o/dnL90vpVkGaPbjvXazV/rC1qBKrZlFugw=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.2.5.tgz"

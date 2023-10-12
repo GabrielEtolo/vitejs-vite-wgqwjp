@@ -9,16 +9,18 @@ $primary: #fefae0;
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 #app {
   height: auto;
+  overflow: hidden;
 }
 
-.preparation header {
-  opacity: 0;
-  margin-top: -53px;
-}
-.show-time header {
-  opacity: 1;
-  left: 0;
-  margin-top: -53px;
+@keyframes headAffichage {
+  from {
+    opacity: 0;
+    height: 600px;
+  }
+  to {
+    opacity: 1;
+    height: 100px;
+  }
 }
 
 header {
@@ -26,8 +28,14 @@ header {
   font-size: 500%;
   display: flex;
   justify-content: center;
-  opacity: 1;
-  transition: opacity 300ms ease-in 0.5s;
+
+  img {
+    opacity: 1;
+    height: 100px;
+    animation-name: headAffichage;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+  }
 }
 .img-fluid {
   width: 75%;
@@ -47,8 +55,11 @@ header {
   padding-bottom: 0rem !important;
 }
 .flex-column {
-  background-color: #fefae0;
-  background-image: linear-gradient(360deg, hsl(30, 86%, 62%), #d4a373 39%);
+  background-color: #d4a373;
+  background-image: url(../../public/img/bck.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   flex-direction: column !important;
   color: #fefae0;
   font-family: "Roboto Condensed";
@@ -132,7 +143,7 @@ a:hover {
 
 .texte {
   opacity: 1;
-  transition: opacity 300ms ease-in 2s;
+  transition: opacity 500ms ease-in 3s;
 }
 .show-time .texte {
   opacity: 1;
@@ -140,7 +151,13 @@ a:hover {
 }
 .image {
   opacity: 1;
-  transition: opacity 300ms ease-in 1s;
+  transition: opacity 500ms ease-in 2s;
+  background-color: #00000023;
+  -webkit-box-shadow: 27px 17px 32px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 27px 17px 32px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 20px 23px 1px rgba(117, 77, 37, 0.25);
+  border-radius: 2%;
+  padding: 10px;
 }
 .show-time .image {
   opacity: 1;
@@ -154,4 +171,17 @@ a:hover {
   .d-flex {
     height: 100vh;
   }
+}
+@media screen and (max-width: 600px) {
+  image,
+  h1 {
+    text-align: center;
+  }
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.mb-3 {
+  margin-bottom: 0 !important;
 }

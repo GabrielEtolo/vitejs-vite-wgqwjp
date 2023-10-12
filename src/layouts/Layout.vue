@@ -11,7 +11,9 @@ window.onload = function () {
 
 <template>
   <div class="d-flex flex-column">
-    <RouterLink to="/"><header>G.E.N</header></RouterLink>
+    <RouterLink to="/"
+      ><header><img src="../../public/img/logo.png" alt="Logo Gen" /></header
+    ></RouterLink>
     <main class="flex-shrink-0 pb-5">
       <div class="container">
         <slot />
