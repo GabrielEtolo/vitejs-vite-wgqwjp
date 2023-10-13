@@ -88,7 +88,7 @@
           <a
             class="btn btn-primary"
             onclick="document.getElementById('contact-form').submit();"
-            >Send</a
+            >Envoyer</a
           >
         </div>
         <div class="status"></div>

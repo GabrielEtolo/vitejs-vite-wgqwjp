@@ -3,38 +3,26 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6 texte">
-        <img
-          src="../assets/giphy.gif"
-          class="d-block mx-lg-auto img-fluid"
-          alt="Bootstrap Themes"
-          width="auto"
-          min-height="300px"
-          loading="lazy"
-        />
-      </div>
-      <div class="col-lg-6 image">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Gabriel Etolo Nguini</h1>
-        <h2>WebDesigner,UX/UI Designer,VueJs Develloper</h2>
-        <p class="lead">
-          Plongez dans l'univers de la conception web et du développement
-          front-end avec un professionnel passionné : moi, un Web Designer,
-          UX/UI Designer et développeur Vue. Formé en Design web et guidé par
-          une curiosité insatiable, je suis déterminé à créer des interfaces
-          intuitives et esthétiques pour répondre aux besoins des utilisateurs.
-          Rejoignez-moi dans cette aventure passionnante où la créativité et la
-          technologie se rejoignent pour façonner l'avenir du web.
-        </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <RouterLink to="/portfolio" class="btn btn-primary"
-            >Voir mon portfolio</RouterLink
-          >
-          <RouterLink to="/contact" class="btn btn-outline-secondary"
-            >Me contacter</RouterLink
-          >
-        </div>
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold nom">Gabriel Etolo Nguini</h1>
+    <h2 class="job">WebDesigner,UX/UI Designer,VueJs Develloper</h2>
+    <div class="col-lg-6 mx-auto texte">
+      <p class="lead mb-4">
+        Bienvenue dans l'univers captivant de la conception web et du
+        développement front-end en compagnie d'un passionné. Fort de ma
+        formation en design web et animé par une curiosité sans limites, mon
+        objectif est de créer des interfaces intuitives et esthétiques pour
+        satisfaire les besoins des utilisateurs. Je vous invite chaleureusement
+        à me rejoindre dans cette aventure palpitante où la créativité se marie
+        harmonieusement avec la technologie pour façonner l'avenir du web.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <RouterLink to="/portfolio" class="btn btn-primary btn-lg px-4 gap-3"
+          >Voir mon portfolio</RouterLink
+        >
+        <RouterLink to="/contact" class="btn btn-outline-secondary btn-lg px-4"
+          >Me contacter</RouterLink
+        >
       </div>
     </div>
   </div>

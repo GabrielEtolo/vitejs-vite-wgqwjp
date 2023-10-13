@@ -15,17 +15,25 @@ $primary: #fefae0;
 @keyframes headAffichage {
   from {
     opacity: 0;
-    height: 600px;
+    height: 400px;
   }
   to {
     opacity: 1;
     height: 100px;
   }
 }
+@keyframes affiche {
+  from {
+    opacity: 0;
+    left: 400px;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
 
 header {
-  font-family: "Custom-MainLayer";
-  font-size: 500%;
   display: flex;
   justify-content: center;
 
@@ -33,9 +41,30 @@ header {
     opacity: 1;
     height: 100px;
     animation-name: headAffichage;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-timing-function: ease-in;
   }
+}
+.nom {
+  opacity: 1;
+  left: 0;
+  animation-name: affiche;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+.job {
+  opacity: 1;
+  left: 0;
+  animation-name: affiche;
+  animation-duration: 3500ms;
+  animation-timing-function: ease-in;
+}
+.texte {
+  opacity: 1;
+  left: 0;
+  animation-name: affiche;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
 }
 .img-fluid {
   width: 75%;
@@ -55,29 +84,30 @@ header {
   padding-bottom: 0rem !important;
 }
 .flex-column {
-  background-color: #d4a373;
   background-image: url(../../public/img/bck.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   flex-direction: column !important;
-  color: #fefae0;
+  color: #3c2807b8;
   font-family: "Roboto Condensed";
 }
 .btn-outline-secondary {
-  --bs-btn-color: #fefae0;
-  --bs-btn-border-color: #fefae0;
-  --bs-btn-hover-color: #d4a373;
+  --bs-btn-color: #3c2807ab;
+  --bs-btn-bg: #fefae086;
+  --bs-btn-border-color: #fefae000;
+  --bs-btn-hover-color: #3c2807;
   --bs-btn-hover-bg: #fefae0;
-  --bs-btn-hover-border-color: #fefae0;
+  --bs-btn-hover-border-color: #3c280700;
   --bs-btn-focus-shadow-rgb: 108, 117, 125;
-  --bs-btn-active-color: #d4a373;
+  --bs-btn-active-color: #3c2807;
   --bs-btn-active-bg: #fefae0;
   --bs-btn-active-border-color: #fefae0;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fefae0;
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #fefae0;
+  transition: 1s;
 }
 a {
   text-decoration: none;
@@ -86,20 +116,21 @@ a:hover {
   color: #fefae0;
 }
 .btn-primary {
-  --bs-btn-color: #d4a373;
-  --bs-btn-bg: #fefae0;
-  --bs-btn-border-color: #fefae0;
-  --bs-btn-hover-color: #fefae0;
-  --bs-btn-hover-bg: #d1ccac00;
-  --bs-btn-hover-border-color: #fefae0;
+  --bs-btn-color: #3c2807ab;
+  --bs-btn-bg: #fefae086;
+  --bs-btn-border-color: #fefae000;
+  --bs-btn-hover-color: #3c2807;
+  --bs-btn-hover-bg: #fefae0;
+  --bs-btn-hover-border-color: #3c280700;
   --bs-btn-focus-shadow-rgb: 60, 197, 145;
-  --bs-btn-active-color: #d4a373;
-  --bs-btn-active-bg: rgba(126, 251, 204, 0.8304);
-  --bs-btn-active-border-color: rgba(102, 251, 194, 0.8092);
+  --bs-btn-active-color: #3c2807;
+  --bs-btn-active-bg: #fefae0;
+  --bs-btn-active-border-color: #fefae0;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #d4a373;
+  --bs-btn-disabled-color: #3c2807;
   --bs-btn-disabled-bg: #fefae0;
   --bs-btn-disabled-border-color: #fefae0;
+  transition: 1s;
 }
 .lead {
   font-size: 1rem;
@@ -111,6 +142,7 @@ a:hover {
 .d-flex {
   display: flex !important;
   height: 100%;
+  justify-content: space-between;
 }
 .contactform {
   --bs-gutter-x: 3rem;
@@ -134,35 +166,6 @@ a:hover {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.preparation .texte {
-  opacity: 0;
-}
-.preparation .image {
-  opacity: 0;
-}
-
-.texte {
-  opacity: 1;
-  transition: opacity 500ms ease-in 3s;
-}
-.show-time .texte {
-  opacity: 1;
-  left: 0;
-}
-.image {
-  opacity: 1;
-  transition: opacity 500ms ease-in 2s;
-  background-color: #00000023;
-  -webkit-box-shadow: 27px 17px 32px 2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 27px 17px 32px 2px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 20px 23px 1px rgba(117, 77, 37, 0.25);
-  border-radius: 2%;
-  padding: 10px;
-}
-.show-time .image {
-  opacity: 1;
-  left: 0;
-}
 @media screen and (min-width: 1280px) {
   #app {
     min-height: 100vh;
@@ -172,12 +175,7 @@ a:hover {
     height: 100vh;
   }
 }
-@media screen and (max-width: 600px) {
-  image,
-  h1 {
-    text-align: center;
-  }
-}
+
 h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
