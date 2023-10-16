@@ -15,4 +15,46 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      removeErrors();
+      const formData = new FormData(form);
+      fetch("./contact.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          console.log(response);
+          // if status code is 422
+          if (response.status === 422) {
+            response.json().then((errors) => {
+              console.log(errors);
+              displayErrors(errors.erreurs);
+            });
+          } else if (response.status === 200) {
+            // display success message
+            console.log("success");
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+
+    function displayErrors(errors) {
+      for (const key in errors) {
+        const errorSpan = document.querySelector(`#error-${key}`);
+        errorSpan.textContent = errors[key];
+      }
+    }
+
+    function removeErrors() {
+      const errorSpans = document.querySelectorAll(".error-message");
+      errorSpans.forEach((errorSpan) => {
+        errorSpan.textContent = "";
+      });
+    }
+  </script>
 </html>
