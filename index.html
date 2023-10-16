@@ -21,7 +21,7 @@
       event.preventDefault();
       removeErrors();
       const formData = new FormData(form);
-      fetch("./contact.php", {
+      fetch("/contact.php", {
         method: "POST",
         body: formData,
       })
